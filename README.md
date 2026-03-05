@@ -4,9 +4,9 @@ This project investigates whether Reddit activity can be used to detect automate
 
 ## Team
 - Alda Zeneli – Logistic Regression
-- Olivia McField – Decision Tree
+- Luke Cargill – Decision Tree
 - Tahjae Jackson – Random Forest
-- (Team member) – K‑Nearest Neighbors
+- Hien Bui – K‑Nearest Neighbors
 
 ## Project Goal
 The goal of this project is to explore how different machine learning models perform on the task of bot detection. We preprocess Reddit comment metadata, train multiple classification models, and compare their performance.
