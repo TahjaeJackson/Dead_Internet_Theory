@@ -153,6 +153,9 @@ Project/
     ├── knn.py
     ├── decision_tree.py
     └── random_forest.py
+|
+|
+|___ evaluation.py - used to evaluate the model performation based on various evalutaion metrics
 ```
 
 ## Course
