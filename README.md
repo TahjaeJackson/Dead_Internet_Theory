@@ -1,4 +1,3 @@
-# Dead_Internet_Theory
 # Dead Internet Theory – Bot Detection Project
 
 This project investigates whether Reddit activity can be used to detect automated bot accounts. Using a dataset of Reddit comments and metadata, we build and compare several machine learning models to classify whether a comment was made by a human or a bot.
