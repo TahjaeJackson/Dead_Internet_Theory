@@ -5,12 +5,6 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_a
 
 import matplotlib.pyplot as plt
 
-# use Helvetica for cleaner poster-style plots
-plt.rcParams['font.family'] = 'Helvetica'
-plt.rcParams['font.size'] = 11
-
-
-# load cleaned datasets
 X_train = pd.read_csv("data/X_train_clean.csv")
 X_test = pd.read_csv("data/X_test_clean.csv")
 
@@ -18,11 +12,8 @@ y_train = pd.read_csv("data/y_train.csv").values.ravel()
 y_test = pd.read_csv("data/y_test.csv").values.ravel()
 
 
-# initialize logistic regression model
 model = LogisticRegression(max_iter=1000)
 
-
-# train model
 model.fit(X_train, y_train)
 
 
@@ -57,15 +48,12 @@ coefficients = pd.Series(model.coef_[0], index=X_train.columns)
 print("\nFeature Importance:")
 print(coefficients.sort_values(ascending=False))
 
-# create feature importance plot styled for the poster
+# create feature importance plot:
 coeff_sorted = coefficients.sort_values(ascending=True)
 
 plt.figure(figsize=(10,6))
 
-# Dartmouth-style green bars
 coeff_sorted.plot(kind='barh', color='#0B6B3A')
-
-# vertical reference line
 plt.axvline(0, color='black', linewidth=1)
 
 plt.title("Logistic Regression Feature Importance", fontsize=14)
@@ -74,7 +62,6 @@ plt.ylabel("Feature")
 
 plt.tight_layout()
 
-# save high quality image for poster
 plt.savefig("logistic_regression_feature_importance.png", dpi=300)
 
 plt.show()
